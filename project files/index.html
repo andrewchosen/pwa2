@@ -23,6 +23,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- Fonts & Icon CSS -->
+	<link href='http://fonts.googleapis.com/css?family=Roboto:900,400italic,400' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	
 	<!-- CSS concatenated and minified via ant build script-->
@@ -36,32 +37,34 @@
 	<!-- Header -->
 	<header>
 		<div class="container">
+			<div class="row">
 
-			<!-- Logo -->
-			<div class="logo"><img src="images/logo.png" alt="Refactor"></div>
+				<!-- Logo -->
+				<div class="logo"><img src="images/logo.png" alt="Refactor"></div>
 
-			<!-- Main Navigation -->
-			<nav class="main" role="navigation">
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="register.html">Sign Up</a></li>
-				</ul>
-				<form class="quick-login">
-					<input type="email" id="email" placeholder="Email">
-					<input type="password" id="email" placeholder="Password">
-					<input type="submit" id="login" value="Login">
-				</form>
-			</nav>
+				<!-- Main Navigation -->
+				<nav class="main" role="navigation">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="register.html">Sign Up</a></li>
+					</ul>
+					<form class="quick-login">
+						<input type="email" id="email" placeholder="Email">
+						<input type="password" id="email" placeholder="Password">
+						<input type="submit" id="login" value="Login">
+					</form>
+				</nav>
+			</div>
 
 			<!-- Call to Action -->
-			<div class="call-to-action">
-				<div class="banner-left">
+			<div class="row call-to-action">
+				<div class="banner banner-left">
 					<h3>A new way<br />to manage your</h3>
 					<h2>Web Development projects.</h2>
 				</div>
-				<div class="banner-right">
+				<div class="banner banner-right">
 					<div class="quick-signup">
-						<h2>Sign up for free!</h2>
+						<h2>SIGN UP TODAY</h2>
 						<form>
 							<input type="text" id="first-name" placeholder="First Name">
 							<input type="text" id="last-name" placeholder="Last Name">
@@ -80,19 +83,21 @@
 	<main class="front">
 
 		<!-- Features -->
-		<section class="row features">
+		<section id="features">
 			<div class="container">
-				<div class="feature">
-					<h3><i class="fa fa-clock-o"></i> Fast!</h3>
-					<p>Create a project and get started within seconds!</p>
-				</div>
-				<div class="feature">
-					<h3><i class="fa fa-magic"></i> Easy!</h3>
-					<p>We've made complicated projects easy to manage.</p>
-				</div>
-				<div class="feature">
-					<h3><i class="fa fa-money"></i> Free!</h3>
-					<p>That's right, this service is completely free to use.</p>
+				<div class="row">
+					<div class="feature">
+						<h3><i class="fa fa-clock-o"></i> Fast!</h3>
+						<p>Create a project and get started within seconds! No more hefty load times from all of the clutter other programs force you to load.</p>
+					</div>
+					<div class="feature">
+						<h3><i class="fa fa-magic"></i> Easy!</h3>
+						<p>We've made complicated projects easy to manage by minifying the dashboard and avoiding unnecessary options and tools.</p>
+					</div>
+					<div class="feature">
+						<h3><i class="fa fa-money"></i> Free!</h3>
+						<p>That's right, this service is completely free to use. So go tell all of your friends and sign up today!</p>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -100,11 +105,13 @@
 
 	<!-- Footer -->
 	<footer>
-		<span class="copyright">&copy; RE{FACTOR}</span>
+		<div class="container">
+			<span class="copyright">&copy; RE{FACTOR}</span>
+		</div>
 	</footer>
 
 	<!-- jquery -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<!-- plugins -->
 
 	<!-- main -->

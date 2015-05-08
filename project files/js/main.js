@@ -1,9 +1,10 @@
 /*  
-	Your Project Title
-	Author: You
+	RE{FACTOR}
+	Author: Andrew Lancaster
+	Date: 5/7/2015
 */
 
-(function($){
+$(document).ready(function($){
 	
 	
 	
