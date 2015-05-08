@@ -92,55 +92,22 @@ nav.main ul li {
 	max-width: 100%;
 }
 
-.call-to-action .quick-signup input[type^="text"],.call-to-action .quick-signup input[type^="email"],.call-to-action .quick-signup input[type^="phone"],.call-to-action .quick-signup input[type^="password"] {
-	margin: 1.25%;
-	padding: 2.5%;
-	float: left;
-	width: 42.25%;
-	background: #66d0d8;
-	color: #FFF;
-}
-
-.call-to-action .quick-signup input[type^="submit"] {
+.button-white {
 	padding: 12px;
 	background: transparent;
 	border: 3px solid #FFF;
 	color: #fff;
 	font-size: 1.1em;
 	border-radius: 2px;
-	float: right;
-	margin: 2.5%;
 	cursor: pointer;
+	text-decoration: none;
 }
 
-.call-to-action .quick-signup input[type^="submit"]:hover {
+.button-white:hover {
 	background: #fff;
 	color: #00B3BE;
 	-webkit-transition: background .3s; /* Safari */
     transition: background .3s;
-}
-
-.call-to-action .quick-signup input[type^="email"] {
-	width: 92%
-}
-
-.call-to-action .quick-signup *::-webkit-input-placeholder {
-    color: #fff;
-}
-
-.call-to-action .quick-signup *:-moz-placeholder {
-    /* FF 4-18 */
-    color: #fff;
-}
-
-.call-to-action .quick-signup *::-moz-placeholder {
-    /* FF 19+ */
-    color: #fff;
-}
-
-.call-to-action .quick-signup *:-ms-input-placeholder {
-    /* IE 10+ */
-    color: #fff;
 }
 
 /*Features*/
