@@ -45,8 +45,8 @@
 				<!-- Main Navigation -->
 				<nav class="main" role="navigation">
 					<form class="quick-login">
-						<input type="text" id="username" placeholder="Username">
-						<input type="password" id="password" placeholder="Password">
+						<input type="text" id="username" class="masterTooltip" placeholder="Username" title="Enter your username">
+						<input type="password" id="password" class="masterTooltip" placeholder="Password" title="Enter your password">
 						<input type="submit" id="login" value="Login">
 					</form>
 				</nav>
@@ -55,22 +55,38 @@
 	</header>
 
 	<!-- Main Content -->
-	<main class="front">
+	<main class="register">
 		<div class="container">
+			<h2>Sign Up</h2>
+			<p>And begin simplifying your web project management.</p>
 			<form>
-				<label for="first-name">First Name</label>
-				<input type="text" id="first-name" placeholder="John / Jane">
-				<label for="last-name">Last Name</label>
-				<input type="text" id="last-name" placeholder="Doe">
-				<label for="email">Email Address</label>
-				<input type="email" id="email" placeholder="jane.doe@gmail.com">
-				<label for="username">Choose a Username</label>
-				<input type="text" id="username">
-				<label for="password">Choose a Password</label>
-				<input type="password" id="password">
-				<label for="verify-password">Verify Password</label>
-				<input type="password" id="verify-password">
-				<input type="submit" value="Create">
+				<div class="row">
+					<div class="thirds">
+						<label for="first-name">First Name</label>
+						<input type="text" id="first-name" class="masterTooltip" placeholder="John / Jane" title="Enter your first name">
+					</div>
+					<div class="thirds">
+						<label for="last-name">Last Name</label>
+						<input type="text" id="last-name" class="masterTooltip" placeholder="Doe" title="Enter your last name">
+					</div>
+					<div class="thirds">
+						<label for="email">Email Address</label>
+						<input type="email" id="email" class="masterTooltip" placeholder="jane.doe@gmail.com" title="Enter a valid email address">
+					</div>
+					<div class="thirds">
+						<label for="username">Username</label>
+						<input type="text" id="username" class="masterTooltip" title="Choose a username">
+					</div>
+					<div class="thirds">
+						<label for="password">Password</label>
+						<input type="password" id="password" class="masterTooltip" title="Choose a password">
+					</div>
+					<div class="thirds">
+						<label for="verify-password">Verify Password</label>
+						<input type="password" id="verify-password" class="masterTooltip" title="Verify your password">
+					</div>
+					</div>
+				<input type="submit" value="Create Account">
 			</div>
 	</main>
 

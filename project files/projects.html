@@ -1,12 +1,7 @@
 <!doctype html>  
 
 <!--
-	This is the main index of the application
-	
-	All your script tags should be at the bottom of this file
-	
-	The only html element in the body is the container div
-	Your code should load your page templates into the container
+	Projects Page
 -->
 
 <html lang="en">
@@ -57,33 +52,48 @@
 	</header>
 
 	<!-- Main Content -->
-	<main class="front">
+	<main class="projects">
 		<div class="container">
-			<h2>Dashboard</h2>
-			<p>Navigate as you please.</p>
+			<h2>Current Projects</h2>
+			<p>Manage your projects below.</p>
 
-			<!-- Tabs -->
-			<ul class="tabs">
-				<li><a href="#projects">Projects</a></li>
-				<li><a href="#tasks">Tasks</a></li>
-				<li><a href="#users">Team</a></li>
-			</ul>
+			<div class="controls">
+				<a href="#" class="modalClick"><i class="fa fa-plus"></i> Add Project</a>
+			</div>
 
-			<!-- Tab Panels -->
-			<ul class="tab-panels">
-				<li id="projects">
-					<h3>Projects</h3>
-					<p> Check out your <a href="projects.html">projects</a>.
-				</li>
-				<li id="tasks">
-					<h3>Tasks</h3>
-					<p>Check out your <a href="#">tasks</a>.</p>
-				</li>
-				<li id="users">
-					<h3>Users</h3>
-					<p>Manage your <a href="#">users</a>.</p>
-				</li>
-			</ul>
+			<div id="overlay">
+				<div id="modal">
+					<span class="close"><i class="fa fa-times fa-lg"></i></span>
+					<h3>Add Project</h3>
+					<div class="add">
+						<form id="addForm">
+							<label for="projectName">Name</label>
+							<input name="projectName" type="text" id="projectName">
+							<label for="projectDescription">Description</label>
+							<input name="projectDescription" type="text" id="projectDescription">
+							<label for="projectDueDate">Due Date</label>
+							<input name="projectDueDate" type="text" id="projectDueDate">
+							<label for="status">Status</label>
+
+							<input name="status" type="radio" id="urgent" class="myStatus">
+								<label for="urgent">Urgent</label>
+							</input>
+
+							<input name="status" type="radio" id="normal" class="myStatus">
+								<label for="normal">Normal</label>
+							</input>
+
+							<input name="status" type="radio" id="delayed" class="myStatus">
+								<label for="delayed">Delayed</label>
+							</input>
+
+							<input name="status" type="radio" id="complete" class="myStatus">
+								<label for="complete">Complete</label>
+							</input>
+
+							<input type="submit" class="button" value="Add Project">
+
+			</div>
 
 		</div>
 	</main>
