@@ -27,7 +27,7 @@ a:hover,a:focus {
 }
 
 .container {
-	max-width: 80%;
+	max-width: 1024px;
 	margin: auto;
 	padding: 30px 2.5%;
 }
