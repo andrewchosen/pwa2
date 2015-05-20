@@ -104,25 +104,45 @@ $(document).ready(function($){
 <!--Use your own API key and city location-->
 <!--1.Embed the WU 3-day forecast summary feature.-->
 <!--Your Code Here-->
-
 $(document).ready(function($){
-	
-<!--This is an example of how to embed Geolookup. Use your own API key and city location-->	
 	$.ajax({ 
 		url : "http://api.wunderground.com/api/f4e785cad7283b4c/forecast/q/CA/Camarillo.json",
 		dataType : "jsonp", 
           success : function(parsed_json) { 
-              var forecast = parsed_json['forecast']['simpleforecast']['forecastday']; 
-                  $.each(forecast, function() {
-                  	$(".three").append("<br />" + this.date.pretty);
-                  });
+              var forecast = parsed_json['forecast']['txt_forecast']['forecastday']; 
+                $(".three").append(
+                	"<p>" + forecast[0].title + "<br />" + forecast[0].fcttext + "</p>" +
+                	"<p>" + forecast[2].title + "<br />" + forecast[2].fcttext + "</p>" +
+                	"<p>" + forecast[4].title + "<br />" + forecast[4].fcttext + "</p>"
+                	);
           } 
 	});
-});  //ready
+});
 
 <!--2.Embed the WU 10-day forecast summary feature.-->	
 <!--Your Code Here-->
 	
+$(document).ready(function($){
+	$.ajax({ 
+		url : "http://api.wunderground.com/api/f4e785cad7283b4c/forecast10day/q/CA/Camarillo.json",
+		dataType : "jsonp", 
+          success : function(parsed_json) { 
+              var forecast = parsed_json['forecast']['txt_forecast']['forecastday']; 
+                $(".tenDay").append(
+                	"<p>" + forecast[0].title + "<br />" + forecast[0].fcttext + "</p>" +
+                	"<p>" + forecast[2].title + "<br />" + forecast[2].fcttext + "</p>" +
+                	"<p>" + forecast[4].title + "<br />" + forecast[4].fcttext + "</p>" +
+                	"<p>" + forecast[6].title + "<br />" + forecast[6].fcttext + "</p>" +
+                	"<p>" + forecast[8].title + "<br />" + forecast[8].fcttext + "</p>" +
+                	"<p>" + forecast[10].title + "<br />" + forecast[10].fcttext + "</p>" +
+                	"<p>" + forecast[12].title + "<br />" + forecast[12].fcttext + "</p>" +
+                	"<p>" + forecast[14].title + "<br />" + forecast[14].fcttext + "</p>" +
+                	"<p>" + forecast[16].title + "<br />" + forecast[16].fcttext + "</p>" +
+                	"<p>" + forecast[18].title + "<br />" + forecast[18].fcttext + "</p>"
+                	);
+          } 
+	});
+});
 
 <!--3.Embed the WU Hourly 1-day forecast feature.-->	
 <!--Your Code Here-->
