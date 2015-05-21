@@ -106,15 +106,20 @@ $(document).ready(function($){
 <!--Your Code Here-->
 $(document).ready(function($){
 	$.ajax({ 
+		// connect to API
 		url : "http://api.wunderground.com/api/f4e785cad7283b4c/forecast/q/CA/Camarillo.json",
+		// select jsonp data type
 		dataType : "jsonp", 
+		// if successful...
           success : function(parsed_json) { 
+          	// store data shortcut location in variable
               var forecast = parsed_json['forecast']['txt_forecast']['forecastday']; 
+              // append data and html to appropriate element
                 $(".three").append(
                 	"<p>" + forecast[0].title + "<br />" + forecast[0].fcttext + "</p>" +
                 	"<p>" + forecast[2].title + "<br />" + forecast[2].fcttext + "</p>" +
                 	"<p>" + forecast[4].title + "<br />" + forecast[4].fcttext + "</p>"
-                	);
+                );
           } 
 	});
 });
@@ -124,10 +129,15 @@ $(document).ready(function($){
 	
 $(document).ready(function($){
 	$.ajax({ 
+		// connect to API
 		url : "http://api.wunderground.com/api/f4e785cad7283b4c/forecast10day/q/CA/Camarillo.json",
+		// select jsonp data type
 		dataType : "jsonp", 
+		// if successful...
           success : function(parsed_json) { 
-              var forecast = parsed_json['forecast']['txt_forecast']['forecastday']; 
+          	// store data shortcut location in variable
+              var forecast = parsed_json['forecast']['txt_forecast']['forecastday'];
+              // append data and html to appropriate element 
                 $(".tenDay").append(
                 	"<p>" + forecast[0].title + "<br />" + forecast[0].fcttext + "</p>" +
                 	"<p>" + forecast[2].title + "<br />" + forecast[2].fcttext + "</p>" +
@@ -139,7 +149,7 @@ $(document).ready(function($){
                 	"<p>" + forecast[14].title + "<br />" + forecast[14].fcttext + "</p>" +
                 	"<p>" + forecast[16].title + "<br />" + forecast[16].fcttext + "</p>" +
                 	"<p>" + forecast[18].title + "<br />" + forecast[18].fcttext + "</p>"
-                	);
+                );
           } 
 	});
 });
@@ -147,14 +157,76 @@ $(document).ready(function($){
 <!--3.Embed the WU Hourly 1-day forecast feature.-->	
 <!--Your Code Here-->
 
-
+$(document).ready(function($){
+	$.ajax({ 
+		// connect to API
+		url : "http://api.wunderground.com/api/f4e785cad7283b4c/hourly/q/CA/Camarillo.json",
+		// select jsonp data type
+		dataType : "jsonp",
+		// if successful... 
+          success : function(parsed_json) { 
+          	// store data shortcut location in variable
+              var forecast = parsed_json['hourly_forecast']; 
+              // loop through forecast data array
+                $.each(forecast, function(i,val){
+                	// append data and html to appropriate element
+                	$(".hourFore").append("<p>" + forecast[i].FCTTIME.pretty + "<br />" + forecast[i].temp.english + "&deg;F" + "(" + forecast[i].temp.metric + "&degC), " + forecast[i].condition + "</p>");
+                	// stop loop after 24 (24 hours per day)
+                	return(i !== 23);
+                });
+          } 
+	});
+});
 
 <!--4.Embed the WU Astronomy feature.-->	
 <!--Your Code Here-->
-	
+
+$(document).ready(function($){
+	$.ajax({ 
+		// connect to API
+		url : "http://api.wunderground.com/api/f4e785cad7283b4c/astronomy/q/CA/Camarillo.json",
+		// select jsonp data type
+		dataType : "jsonp", 
+		// if successful...
+          success : function(parsed_json) { 
+          	// store data shortcut location in variable
+              var astro = parsed_json['moon_phase']; 
+              // append data and html to appropriate element
+                $(".astro").append("Moon Illumination: " + astro.percentIlluminated + "%<br />"
+                	+ "Moon Age: " + astro.ageOfMoon + "<br />"
+                	+ "Current Time: " + astro.current_time.hour + ":" + astro.current_time.minute + "<br />"
+                	+ "Sunrise: " + astro.sunrise.hour + ":" + astro.sunrise.minute + "<br />"
+                	+ "Sunset: " + astro.sunset.hour + ":" + astro.sunset.minute
+                );
+          } 
+	});
+});
 
 <!--5.Embed the WU Almanac for today feature.-->	
 <!--Your Code Here-->
+
+$(document).ready(function($){
+	$.ajax({ 
+		// connect to API
+		url : "http://api.wunderground.com/api/f4e785cad7283b4c/almanac/q/CA/Camarillo.json",
+		// select jsonp data type
+		dataType : "jsonp", 
+		// if successful...
+          success : function(parsed_json) { 
+          	// store data shortcut location in variable
+              var almanac = parsed_json['almanac']; 
+              // append data and html to appropriate element
+                $(".almanac").append("Local Airport: " + almanac.airport_code + "<br />"
+                	+ "Average High: " + almanac.temp_high.normal.F + "&deg;F (" + almanac.temp_high.normal.C + "&deg;C)<br />"
+                	+ "Record High: " + almanac.temp_high.record.F + "&deg;F (" + almanac.temp_high.record.C + "&deg;C)<br />"
+                	+ "Record Year: " + almanac.temp_high.recordyear + "<br />"
+                	+ "Average Low: " + almanac.temp_low.normal.F + "&deg;F (" + almanac.temp_low.normal.C + "&deg;C)<br />"
+                	+ "Record High: " + almanac.temp_low.record.F + "&deg;F (" + almanac.temp_low.record.C + "&deg;C)<br />"
+                	+ "Record Year: " + almanac.temp_low.recordyear
+                );
+          } 
+	});
+});
 
 </script>
 
