@@ -1,0 +1,115 @@
+<!doctype html>  
+
+<!--
+	This is the main index of the application
+	
+	All your script tags should be at the bottom of this file
+	
+	The only html element in the body is the container div
+	Your code should load your page templates into the container
+-->
+
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>RE{FACTOR} - Life, Uncomplicated.</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Fonts & Icon CSS -->
+	<link href='http://fonts.googleapis.com/css?family=Roboto:900,400italic,400' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	
+	<!-- CSS concatenated and minified via ant build script-->
+	<link rel="stylesheet" href="css/style.css?v=1">
+	<!-- end CSS-->
+	
+</head>
+
+<body>
+
+	<!-- Header -->
+	<header>
+		<div class="container">
+			<div class="row">
+
+				<!-- Logo -->
+				<div class="logo"><a href="index.html"><img src="images/logo.png" alt="Refactor"></a></div>
+
+				<!-- Main Navigation -->
+				<nav class="main" role="navigation">
+					<form class="quick-login">
+						<input name="signinButton" type="text" id="user" class="masterTooltip" placeholder="Username" title="Enter your username">
+						<input name="signinButton" type="password" id="pass" class="masterTooltip" placeholder="Password" title="Enter your password">
+						<button name="signinButton" type="button" id="signinButton" value="Login">Login</button>
+					</form>
+				</nav>
+			</div>
+
+			<!-- Call to Action -->
+			<div class="row call-to-action">
+				<div class="banner banner-left">
+					<h3>A new way<br />to manage your</h3>
+					<h2>Web Development projects.</h2>
+					<a href="register.html" class="masterTooltip button-white" title="Join now!">GET STARTED &nbsp;&nbsp;<i class="fa fa-long-arrow-right"></i></a>
+				</div>
+				<div class="banner banner-right">
+				
+				</div>
+				<div class="cycle-slideshow" style="position:absolute;top:0;left:0;z-index:-1" data-cycle-pause-on-hover="true" data-cycle-speed="700">
+    <img src="http://malsup.github.io/images/p1.jpg">
+    <img src="http://malsup.github.io/images/p3.jpg">
+    <img src="http://malsup.github.io/images/p4.jpg">
+</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Main Content -->
+	<main class="front">
+
+		<!-- Features -->
+		<section id="features">
+			<div class="container">
+				<div class="row">
+					<div class="feature">
+						<h3><i class="fa fa-clock-o"></i> Fast!</h3>
+						<p>Create a project and get started within seconds! No more hefty load times from all of the clutter other programs force you to load.</p>
+					</div>
+					<div class="feature">
+						<h3><i class="fa fa-magic"></i> Easy!</h3>
+						<p>We've made complicated projects easy to manage by minifying the dashboard and avoiding unnecessary options and tools.</p>
+					</div>
+					<div class="feature">
+						<h3><i class="fa fa-money"></i> Free!</h3>
+						<p>That's right, this service is completely free to use. So go tell all of your friends and sign up today!</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<!-- Footer -->
+	<footer>
+		<div class="container">
+			<span class="copyright">&copy; RE{FACTOR}</span>
+		</div>
+	</footer>
+
+	<!-- jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+	<!-- plugins -->
+	<script src="http://malsup.github.com/jquery.cycle2.js"></script>
+
+	<!-- main -->
+	<script type="text/javascript" src="js/main.js"></script>
+  
+</body>
+</html>

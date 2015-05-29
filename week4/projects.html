@@ -1,0 +1,130 @@
+<!doctype html>  
+
+<!--
+	Projects Page
+-->
+
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>Dashboard | RE{FACTOR}</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Fonts & Icon CSS -->
+	<link href='http://fonts.googleapis.com/css?family=Roboto:900,400italic,400' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<!-- jQuery UI Styles -->
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	
+	<!-- CSS concatenated and minified via ant build script-->
+	<link rel="stylesheet" href="css/style.css?v=1">
+	<!-- end CSS-->
+</head>
+
+<body>
+
+	<!-- Header -->
+	<header>
+		<div class="container">
+			<div class="row">
+
+				<!-- Logo -->
+				<div class="logo"><a href="index.html"><img src="images/logo.png" alt="Refactor"></a></div>
+
+				<!-- Main Navigation -->
+				<nav class="main" role="navigation">
+					<div class="welcome">
+						Welcome!
+					</div>
+					<ul>
+						<li><a href="dashboard.html">Dashboard</a></li>
+						<li><button name="logOut" type="button" id="logOut" value="Logout">Logout</button></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+
+	<!-- Main Content -->
+	<main id="projects">
+		<div class="container">
+			<h2>Current Projects</h2>
+			<p>Manage your projects below.</p>
+
+			<div class="controls">
+				<a href="#" class="modalClick"><i class="fa fa-plus"></i> Add Project</a>
+			</div>
+
+			<!-- Start Project List -->
+			<div id="projectlist">
+				<div id="sortable" class="projects">
+
+				</div>
+			</div>
+
+			<div id="overlay">
+				<div id="modal">
+					<span class="close"><i class="fa fa-times fa-lg"></i></span>
+					<h3>Add Project</h3>
+					<div class="add">
+						<form id="addForm">
+							<label for="projectName">Name</label>
+							<input name="projectName" type="text" id="projectName" class="maxLength1">
+							<label for="projectDescription">Description</label>
+							<input name="projectDescription" type="text" id="projectDescription" class="maxLength2">
+							<label for="projectDueDate">Due Date</label>
+							<input name="projectDueDate" type="text" id="projectDueDate" class="myDatepicker">
+							<label for="status">Status</label>
+
+							<input name="status" type="radio" id="urgent" class="myStatus">
+								<label for="urgent">Urgent</label>
+							</input>
+
+							<input name="status" type="radio" id="normal" class="myStatus">
+								<label for="normal">Normal</label>
+							</input>
+
+							<input name="status" type="radio" id="delayed" class="myStatus">
+								<label for="delayed">Delayed</label>
+							</input>
+
+							<input name="status" type="radio" id="complete" class="myStatus">
+								<label for="complete">Complete</label>
+							</input>
+
+							<button type="button" name="addButton" id="addButton" class="button" value="Add Project">Add Project</button>
+						</form>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</main>
+
+	<!-- Footer -->
+	<footer>
+		<div class="container">
+			<span class="copyright">&copy; RE{FACTOR}</span>
+		</div>
+	</footer>
+
+	<!-- jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+	<!-- plugins -->
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.maxlength-min.js"></script>
+
+	<!-- main -->
+	<script type="text/javascript" src="js/main.js"></script>
+  
+</body>
+</html>

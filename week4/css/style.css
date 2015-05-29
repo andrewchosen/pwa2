@@ -1,0 +1,352 @@
+/* Created by Andrew Lancaster
+ * on May 7, 2015
+ */
+
+/*General*/
+
+body {
+	margin: 0;
+	color: #1e1e1e;
+	font-family: 'Roboto', sans-serif;
+	background: #e6e7e8;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a,a:visited {
+	color: #0B6B71;
+	text-decoration: none;
+}
+
+a:hover,a:focus {
+	text-decoration: underline;
+}
+
+.container {
+	max-width: 1024px;
+	margin: auto;
+	padding: 30px 2.5%;
+}
+
+.row {
+	clear: both;
+	overflow: auto;
+}
+
+.thirds {
+	width: 33.33333%;
+	float: left;
+	margin: 30px 0;
+}
+
+input[type^="text"],input[type^="email"],input[type^="phone"],input[type^="password"] {
+	padding: 8px;
+	border: 0;
+	border-radius: 2px;
+}
+
+label {
+	display: block;
+	margin: 0 15px 15px 0 ;
+}
+
+/*Headings*/
+
+h1,h2 {
+	font-size: 24px;
+	color: #1e1e1e;
+}
+
+/*Buttons*/
+
+a.button-white {
+	padding: 12px;
+	background: transparent;
+	border: 3px solid #FFF;
+	color: #fff;
+	font-size: 1.1em;
+	border-radius: 2px;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+a.button-white:hover {
+	background: #fff;
+	color: #00B3BE;
+	-webkit-transition: background .3s; /* Safari */
+    transition: background .3s;
+}
+
+input[type="submit"] {
+	padding: 12px;
+	background: #333;
+	color: #fff;
+	font-size: 1.1em;
+	border: 0;
+	border-radius: 2px;
+	cursor: pointer;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+input[type="submit"]:hover {
+	background: #000;
+	-webkit-transition: background .3s; /* Safari */
+    transition: background .3s;
+}
+
+input#login {
+	font-size: 12px;
+	padding: 7px;
+	margin-left: 4px;
+}
+
+/*Header*/
+
+header {
+	position: relative;
+	overflow: hidden;
+}
+
+.logo {
+	float: left;
+	width: 33.33333%;
+}
+
+/*Slides*/
+
+header .cycle-slideshow, header .cycle-slideshow img {
+	width: 100%;
+	height: auto;
+}
+
+/*Main Nav*/
+
+nav.main {
+	float: left;
+	width: 66.66666%;
+	text-align: right;
+}
+
+nav.main ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav.main ul li {
+	display: inline;
+}
+
+/*Call-to-Action*/
+
+.call-to-action {
+	padding: 60px 0;
+}
+
+.call-to-action .banner {
+	float: left;
+}
+
+.call-to-action .banner-left {
+	width: 61.80339882723972%;
+}
+
+.call-to-action .banner-left h2 {
+	font-size: 2.5em;
+	color: #fff;
+	margin-top: 0;
+}
+
+.call-to-action .banner-left h3 {
+	font-size: 2em;
+	margin-bottom: 10px;
+	color: #fff;
+	font-weight: 400;
+}
+
+.call-to-action .banner-right {
+	width: 38.19660117276028%;
+}
+
+.call-to-action .quick-signup {
+	max-width: 100%;
+}
+
+/*Tooltip*/
+
+.tooltip {
+	display: none;
+	position: absolute;
+	background-color: #1e1e1e;
+	color: #f9f9f9;
+	font-size: 12px;
+	padding: 8px;
+	border-radius: 3px;
+}
+
+/*Features*/
+
+.feature h3 {
+	font-size: 1.5em;
+	margin-top: 0;
+}
+
+.feature {
+	width: 28.33333%;
+	padding: 2.5%;
+	float: left;
+}
+
+/*Register*/
+
+main.register input[type=text],main.register input[type=password],main.register input[type=email] {
+	width: 80%;
+}
+
+/*Tabs*/
+
+.tabs {
+	width: 100%;
+	clear: both;
+}
+
+.tabs li a{
+	display: inline-block;
+	float: left;
+	padding: 12px;
+}
+
+.tabs li.active a, .tabs li a:hover {
+	background-color: #fff;
+}
+
+.tab-panels h3 {
+	margin-top: 0;
+}
+
+.tab-panels li {
+	display: block;
+	clear: both;
+	background: #fff;
+	padding: 30px;
+
+}
+
+/*Modal*/
+
+.controls {
+	margin: 30px 0;
+}
+
+.controls a.modalClick {
+	padding: 8px 16px;
+	background: #FFF;
+	text-decoration: none;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+
+.controls a.modalClick:hover {
+	background: #0B6B71;
+	color: #FFF;
+}
+
+#overlay {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	display: none;
+}
+
+#modal {
+	width: 400px;
+	background: #fff;
+	box-shadow: 0 0 50px #000;
+	border-radius: 5px;
+	overflow: hidden;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	margin-top: -250px;
+	margin-left: -200px;
+	padding: 30px;
+	z-index: 1001;
+	display: none;
+}
+
+#modal .close {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	display: inline-block;
+	line-height: 1em;
+	padding: 4px;
+	cursor: pointer;
+	background-color: #ff3333;
+	border-radius: 5px;
+	color: #fff;
+}
+
+#modal input[type="radio"]{
+	display: none;
+}
+
+#modal input[type="text"] {
+	background: #eee;
+	width: 90%;
+	margin-bottom: 15px;
+}
+
+#modal h3 {
+	margin-top: 0;
+}
+
+#modal input[type="radio"] + label {
+	display: inline-block;
+	padding: 8px;
+	cursor: pointer;
+	border: 2px solid #00B3BE;
+	border-radius: 3px;
+	color: #00B3BE;
+}
+
+#modal input[type="radio"]:checked + label, #modal input[type="radio"] + label:hover {
+	border-color: #00B3BE;
+	background-color: #00B3BE;
+	color: #fff;
+}
+
+#modal .status {
+	font-size: 12px;
+	color: #555;
+	text-align: right;
+}
+
+/*Projects*/
+
+.projects>div {
+	margin-top: 10px;
+	background: #EEE;
+  	border-radius: 3px;
+}
+
+#sortable { list-style-type: none; margin: 0; padding: 0; }
+  #sortable li { margin: 0 5px 5px 5px; padding: 5px; font-size: 1.2em; height: 1.5em; }
+  html>body #sortable li { height: 1.5em; line-height: 1.2em; }
+  .ui-state-highlight { height: 1.5em; line-height: 1.2em; }
+
+/*Footer*/
+
+footer {
+	text-align: center;
+}

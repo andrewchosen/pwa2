@@ -1,0 +1,106 @@
+<!doctype html>  
+
+<!--
+	This is the main index of the application
+	
+	All your script tags should be at the bottom of this file
+	
+	The only html element in the body is the container div
+	Your code should load your page templates into the container
+-->
+
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>Dashboard | RE{FACTOR}</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Fonts & Icon CSS -->
+	<link href='http://fonts.googleapis.com/css?family=Roboto:900,400italic,400' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	
+	<!-- CSS concatenated and minified via ant build script-->
+	<link rel="stylesheet" href="css/style.css?v=1">
+	<!-- end CSS-->
+	
+</head>
+
+<body>
+
+	<!-- Header -->
+	<header>
+		<div class="container">
+			<div class="row">
+
+				<!-- Logo -->
+				<div class="logo"><a href="index.html"><img src="images/logo.png" alt="Refactor"></a></div>
+
+				<!-- Main Navigation -->
+				<nav class="main" role="navigation">
+					<div class="welcome">
+						Welcome!
+					</div>
+					<ul>
+						<li><a href="dashboard.html">Dashboard</a></li>
+						<li><button name="logOut" type="button" id="logOut" value="Logout">Logout</button></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+
+	<!-- Main Content -->
+	<main class="front">
+		<div class="container">
+			<h2>Dashboard</h2>
+			<p>Navigate as you please.</p>
+
+			<!-- Tabs -->
+			<ul class="tabs">
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#tasks">Tasks</a></li>
+				<li><a href="#users">Team</a></li>
+			</ul>
+
+			<!-- Tab Panels -->
+			<ul class="tab-panels">
+				<li id="projects">
+					<h3>Projects</h3>
+					<p> Check out your <button type="button" class="projects-btn">Projects</button>
+				</li>
+				<li id="tasks">
+					<h3>Tasks</h3>
+					<p>Check out your <a href="#">tasks</a>.</p>
+				</li>
+				<li id="users">
+					<h3>Users</h3>
+					<p>Manage your <a href="#">users</a>.</p>
+				</li>
+			</ul>
+
+		</div>
+	</main>
+
+	<!-- Footer -->
+	<footer>
+		<div class="container">
+			<span class="copyright">&copy; RE{FACTOR}</span>
+		</div>
+	</footer>
+
+	<!-- jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<!-- plugins -->
+
+	<!-- main -->
+	<script type="text/javascript" src="js/main.js"></script>
+  
+</body>
+</html>
