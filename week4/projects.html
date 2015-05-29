@@ -45,8 +45,8 @@
 						Welcome!
 					</div>
 					<ul>
-						<li><a href="dashboard.html">Dashboard</a></li>
-						<li><button name="logOut" type="button" id="logOut" value="Logout">Logout</button></li>
+						<li><a href="dashboard.html" class="button-white">Dashboard</a></li>
+						<li><button name="logOut" type="button" id="logOut" value="Logout" class="button-white">Logout</button></li>
 					</ul>
 				</nav>
 			</div>
@@ -70,6 +70,7 @@
 				</div>
 			</div>
 
+			<!-- Modal Overlay -->
 			<div id="overlay">
 				<div id="modal">
 					<span class="close"><i class="fa fa-times fa-lg"></i></span>
@@ -83,23 +84,18 @@
 							<label for="projectDueDate">Due Date</label>
 							<input name="projectDueDate" type="text" id="projectDueDate" class="myDatepicker">
 							<label for="status">Status</label>
-
 							<input name="status" type="radio" id="urgent" class="myStatus">
 								<label for="urgent">Urgent</label>
 							</input>
-
 							<input name="status" type="radio" id="normal" class="myStatus">
 								<label for="normal">Normal</label>
 							</input>
-
 							<input name="status" type="radio" id="delayed" class="myStatus">
 								<label for="delayed">Delayed</label>
 							</input>
-
 							<input name="status" type="radio" id="complete" class="myStatus">
 								<label for="complete">Complete</label>
 							</input>
-
 							<button type="button" name="addButton" id="addButton" class="button" value="Add Project">Add Project</button>
 						</form>
 					</div>

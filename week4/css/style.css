@@ -63,7 +63,7 @@ h1,h2 {
 
 /*Buttons*/
 
-a.button-white {
+button.button-white, a.button-white {
 	padding: 12px;
 	background: transparent;
 	border: 3px solid #FFF;
@@ -74,35 +74,38 @@ a.button-white {
 	text-decoration: none;
 }
 
-a.button-white:hover {
+button.button-white:hover, a.button-white:hover {
 	background: #fff;
 	color: #00B3BE;
 	-webkit-transition: background .3s; /* Safari */
     transition: background .3s;
 }
 
-input[type="submit"] {
+button {
 	padding: 12px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.1em;
 	background: #333;
 	color: #fff;
-	font-size: 1.1em;
 	border: 0;
 	border-radius: 2px;
 	cursor: pointer;
 	text-decoration: none;
-	text-transform: uppercase;
 }
 
-input[type="submit"]:hover {
+button:hover {
 	background: #000;
 	-webkit-transition: background .3s; /* Safari */
     transition: background .3s;
 }
 
-input#login {
+button.login {
 	font-size: 12px;
-	padding: 7px;
+	padding: 9px;
 	margin-left: 4px;
+	font-weight: 900;
+	letter-spacing: .1em;
+	text-transform: uppercase;
 }
 
 /*Header*/
@@ -110,11 +113,22 @@ input#login {
 header {
 	position: relative;
 	overflow: hidden;
+	background: #00B3BE;
+}
+
+body.front header {
+	background-color: transparent;
 }
 
 .logo {
 	float: left;
 	width: 33.33333%;
+}
+
+/*Welcome Message*/
+
+.welcome {
+	margin-bottom: 10px;
 }
 
 /*Slides*/
