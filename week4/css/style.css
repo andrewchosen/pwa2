@@ -359,6 +359,18 @@ main.register input[type=text],main.register input[type=password],main.register 
   html>body #sortable li { height: 1.5em; line-height: 1.2em; }
   .ui-state-highlight { height: 1.5em; line-height: 1.2em; }
 
+#projectlist h3 {
+	margin-top: 0;
+}
+
+#projectlist button {
+	margin-top: 12px;
+}
+
+#projectlist .deletebtn {
+	margin-right: 12px;
+}
+
 /*Footer*/
 
 footer {

@@ -191,11 +191,11 @@
 						$(".projects").append(
 							"<div class='ui-state-default' style='border:1px solid #ccc; padding:20px'>" +
 							"<input class='projectid' type='hidden' value='" + result.id + "'>" +
-							" Project Name: " + result.projectName + "<br />" +
+							" <h3> " + result.projectName + "</h3>" +
 							" Project Description: " + result.projectDescription + "<br />" + 
 							" Project Status: " + result.status + "<br />" +
-							"<button class='deletebtn'>Delete</button>" +
-							"<button class='editbtn'>Edit</button>" +
+							"<button class='deletebtn'><i class='fa fa-trash-o'></i> Delete</button>" +
+							"<button class='editbtn'><i class='fa fa-pencil'></i> Edit</button>" +
 							"</div>"
 						);
 					};
